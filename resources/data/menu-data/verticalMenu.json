@@ -1,0 +1,49 @@
+{
+  "menu": [
+    {
+      "url": "dashboard",
+      "name": "Home",
+      "icon": "home",
+      "slug": "dashboard"
+    },
+    {
+      "url": "user",
+      "name": "User",
+      "icon": "users",
+      "slug": "user",
+      "role": "admin"
+    },
+    {
+      "url": "inovasi",
+      "name": "Inovasi",
+      "icon": "users",
+      "slug": "inovasi"
+    },
+    {
+      "name": "Master",
+      "icon": "document",
+      "slug": "other",
+      "role": "admin",
+      "badgeClass": "badge badge-pill badge-light-danger ml-auto mr-1",
+      "submenu": [
+        {
+          "url": "jenis-inovasi",
+          "name": "Jenis Inovasi",
+          "icon": "circle",
+          "slug": "jenis-inovasi"
+        },
+        {
+          "url": "role",
+          "name": "Role",
+          "icon": "circle",
+          "slug": "role"
+        },{
+          "url": "mitra",
+          "name": "Mitra",
+          "icon": "circle",
+          "slug": "mitra"
+        }
+      ]
+    }
+  ]
+}
