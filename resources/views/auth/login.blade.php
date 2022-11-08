@@ -24,12 +24,12 @@
                         @csrf
                         <div class="form-group">
                             <label for="login-email" class="form-label">Username</label>
-                            <input type="text" class="form-control @error('email') is-invalid @enderror" id="login-email"
-                                name="username" placeholder="john@example.com" aria-describedby="login-email" tabindex="1"
-                                autofocus value="{{ old('email') }}" />
-                            @error('email')
+                            <input type="text" class="form-control @error('username') is-invalid @enderror"
+                                id="login-email" name="username" placeholder="john@example.com"
+                                aria-describedby="login-email" tabindex="1" autofocus value="{{ old('username') }}" />
+                            @error('username')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
+                                    <strong>{{ 'username tidak cocok' }}</strong>
                                 </span>
                             @enderror
                         </div>

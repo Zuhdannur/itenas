@@ -1,6 +1,6 @@
 @extends('layouts/contentLayoutMaster')
 
-@section('title', 'Kelola User')
+@section('title', 'Kelola Jenis Inovasi')
 
 @section('vendor-style')
     {{-- vendor css files --}}
