@@ -29,7 +29,7 @@
                                 tabindex="1" autofocus value="{{ old('username') }}" />
                             @error('username')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
+                                    <strong>{{ 'username tidak cocok' }}</strong>
                                 </span>
                             @enderror
                         </div>
