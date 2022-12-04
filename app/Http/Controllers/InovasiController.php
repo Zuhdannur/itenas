@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Imports\ImportInovasi;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
 
 class InovasiController extends Controller
 {
@@ -162,5 +164,19 @@ class InovasiController extends Controller
         }
 
         return response()->json($data);
+    }
+
+    public function import(Request $request) {
+        try {
+            Excel::import(new ImportInovasi, $request->file('file'));
+            return \response()->json([
+                "message" => "berhasil import data"
+            ]);
+        } catch ( \Exception $e ) {
+            return \response()->json([
+                "message" => $e
+            ],500);
+        }
+
     }
 }

@@ -1,6 +1,6 @@
 {
-    "/js/core/app.js": "/js/core/app.js?id=6ac8c4fa3931b01fcf72",
-    "/js/core/app-menu.js": "/js/core/app-menu.js?id=3ac63fb0bede01498a3a",
+    "/js/core/app.js": "/js/core/app.js?id=dfe6ed4b9a95b6b746f0",
+    "/js/core/app-menu.js": "/js/core/app-menu.js?id=81ad840879759db2b564",
     "/css/base/plugins/charts/chart-apex.css": "/css/base/plugins/charts/chart-apex.css?id=dc54911b27966b4883a8",
     "/css/base/plugins/extensions/ext-component-context-menu.css": "/css/base/plugins/extensions/ext-component-context-menu.css?id=3f546d6d55b5fc2bd388",
     "/css/base/plugins/extensions/ext-component-drag-drop.css": "/css/base/plugins/extensions/ext-component-drag-drop.css?id=704e6dc1f138ec6e058e",
@@ -119,7 +119,7 @@
     "/js/scripts/pages/app-user-list.js": "/js/scripts/pages/app-user-list.js?id=3363adaf8e4664230447",
     "/js/scripts/pages/app-user-view.js": "/js/scripts/pages/app-user-view.js?id=6b3a5ab0ef0bc14e9a45",
     "/js/scripts/pages/dashboard-analytics.js": "/js/scripts/pages/dashboard-analytics.js?id=73e87a4ce1397f91cb2e",
-    "/js/scripts/pages/dashboard-ecommerce.js": "/js/scripts/pages/dashboard-ecommerce.js?id=a50eb1ac9ae77add1336",
+    "/js/scripts/pages/dashboard-ecommerce.js": "/js/scripts/pages/dashboard-ecommerce.js?id=1534901f7b3a2df95a3c",
     "/js/scripts/pages/page-account-settings.js": "/js/scripts/pages/page-account-settings.js?id=b783523fb2c5a3530d99",
     "/js/scripts/pages/page-auth-forgot-password.js": "/js/scripts/pages/page-auth-forgot-password.js?id=202bd01e59d67c0e9234",
     "/js/scripts/pages/page-auth-login.js": "/js/scripts/pages/page-auth-login.js?id=57816a7d22a42a0ae442",

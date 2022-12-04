@@ -1,7 +1,7 @@
 {
   "menu": [
     {
-      "url": "dashboard",
+      "url": "/",
       "name": "Home",
       "icon": "home",
       "slug": "dashboard"
@@ -16,12 +16,12 @@
     {
       "url": "inovasi",
       "name": "Inovasi",
-      "icon": "users",
+      "icon": "file-text",
       "slug": "inovasi"
     },
     {
       "name": "Master",
-      "icon": "document",
+      "icon": "database",
       "slug": "other",
       "role": "admin",
       "badgeClass": "badge badge-pill badge-light-danger ml-auto mr-1",
@@ -44,6 +44,12 @@
           "slug": "mitra"
         }
       ]
+    },
+    {
+      "url": "settings",
+      "name": "Settings",
+      "icon": "settings",
+      "slug": "settings"
     }
   ]
 }

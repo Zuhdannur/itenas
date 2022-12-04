@@ -40,6 +40,46 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="modalImport" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Upload File Excel
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" />
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-primary btnLoading" type="button" disabled style="display:none">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            <span class="ml-25 align-middle">Loading...</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btnUpload">Upload</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toast toast-basic hide position-fixed" role="alert" aria-live="assertive" aria-atomic="true"
+            data-delay="5000" style="top: 1rem; right: 1rem">
+            <div class="toast-header">
+                <img src="{{ asset('images/logo/logo.png') }}" class="mr-1" alt="Toast image" height="18"
+                    width="25" />
+                <strong class="mr-auto">Pemberitahuan</strong>
+                <button type="button" class="ml-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">Data berhasil di import</div>
+        </div>
     </section>
 @endsection
 
@@ -71,6 +111,7 @@
             if ($('body').attr('data-framework') === 'laravel') {
                 assetPath = $('body').attr('data-asset-path');
             }
+
             datatables = table.DataTable({
                 serverSide: true,
                 processing: true,
@@ -149,18 +190,28 @@
                 displayLength: 7,
                 lengthMenu: [7, 10, 25, 50, 75, 100],
                 buttons: [{
-                    text: feather.icons['plus'].toSvg({
-                        class: 'mr-50 font-small-4'
-                    }) + 'Tambah',
-                    className: 'create-new btn btn-primary',
-                    attr: {
-                        'onclick': 'window.location.href="{{ route('inovasi.create') }}";return false;',
+                        text: feather.icons['plus'].toSvg({
+                            class: 'mr-50 font-small-4'
+                        }) + 'Tambah',
+                        className: 'create-new btn btn-primary',
+                        attr: {
+                            'onclick': 'window.location.href="{{ route('inovasi.create') }}";return false;',
 
+                        },
+                        init: function(api, node, config) {
+                            $(node).removeClass('btn-secondary');
+                        }
                     },
-                    init: function(api, node, config) {
-                        $(node).removeClass('btn-secondary');
+                    {
+                        text: feather.icons['file-text'].toSvg({
+                            class: 'mr-50 font-small-4'
+                        }) + 'Import',
+                        className: 'create-new btn btn-success ml-1 btnImport',
+                        attr: {},
+                        init: function(api, node, config) {}
+
                     }
-                }],
+                ],
 
                 language: {
                     paginate: {
@@ -169,6 +220,43 @@
                     }
                 }
             });
+
+            $(".btnImport").on("click", function() {
+                $("#modalImport").modal('show')
+            })
+
+            $(".btnUpload").on("click", function() {
+                $(".btnLoading").show();
+                $(this).hide();
+
+                var fileData = $('#customFile').prop('files')[0];
+
+                var formData = new FormData();
+
+                formData.append('file', fileData);
+                formData.append('_token', '{{ csrf_token() }}');
+
+                $.ajax({
+                    url: '{{ route('inovasi.import') }}',
+                    dataType: 'text',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: formData,
+                    type: 'post',
+                    success: function(response) {
+                        $('.toast-basic').toast('show');
+                    },
+                }).done(function() {
+                    $("#modalImport").modal('hide')
+                    $(".btnLoading").hide();
+                    $(this).show();
+
+                    datatables.ajax.reload();
+                });
+
+            })
+
         })
     </script>
 @endsection

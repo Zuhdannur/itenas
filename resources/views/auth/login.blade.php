@@ -24,10 +24,10 @@
                         @csrf
                         <div class="form-group">
                             <label for="login-email" class="form-label">Username</label>
-                            <input type="text" class="form-control @error('email') is-invalid @enderror" id="login-email"
-                                name="username" placeholder="john@example.com" aria-describedby="login-email" tabindex="1"
-                                autofocus value="{{ old('email') }}" />
-                            @error('email')
+                            <input type="text" class="form-control @error('username') is-invalid @enderror"
+                                id="login-email" name="username" placeholder="Username" aria-describedby="login-email"
+                                tabindex="1" autofocus value="{{ old('username') }}" />
+                            @error('username')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -62,34 +62,6 @@
                         </div>
                         <button type="submit" class="btn btn-primary btn-block" tabindex="4">Sign in</button>
                     </form>
-
-                    <p class="text-center mt-2">
-                        <span>New on our platform?</span>
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">
-                                <span>Create an account</span>
-                            </a>
-                        @endif
-                    </p>
-
-                    <div class="divider my-2">
-                        <div class="divider-text">or</div>
-                    </div>
-
-                    <div class="auth-footer-btn d-flex justify-content-center">
-                        <a href="javascript:void(0)" class="btn btn-facebook">
-                            <i data-feather="facebook"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="btn btn-twitter white">
-                            <i data-feather="twitter"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="btn btn-google">
-                            <i data-feather="mail"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="btn btn-github">
-                            <i data-feather="github"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
             <!-- /Login v1 -->

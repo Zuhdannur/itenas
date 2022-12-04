@@ -23,6 +23,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('inovasi', InovasiController::class);
     Route::group(['prefix' => '/inovasi/data'],function() {
         Route::get('/getData','InovasiController@getData')->name('inovasi.getData');
+        Route::post('/import','InovasiController@import')->name('inovasi.import');
     });
 
     Route::resource('role', RoleController::class);
@@ -41,20 +42,7 @@ Route::group(['middleware' => ['auth']], function() {
         Route::get('/getData','MitraController@getData')->name('mitra.getData');
     });
 
-    Route::resource('dashboard', DashboardController::class);
-
-    
-
-    Route::get('/', 'StaterkitController@home')->name('home');
-    Route::get('home', 'StaterkitController@home')->name('home');
-    // Route Components
-    Route::get('layouts/collapsed-menu', 'StaterkitController@collapsed_menu')->name('collapsed-menu');
-    Route::get('layouts/boxed', 'StaterkitController@layout_boxed')->name('layout-boxed');
-    Route::get('layouts/without-menu', 'StaterkitController@without_menu')->name('without-menu');
-    Route::get('layouts/empty', 'StaterkitController@layout_empty')->name('layout-empty');
-    Route::get('layouts/blank', 'StaterkitController@layout_blank')->name('layout-blank');
+    Route::resource('/', DashboardController::class);   
+    Route::resource('/settings',SettingsController::class);
 });
 
-
-// locale Route
-Route::get('lang/{locale}', [LanguageController::class, 'swap']);
