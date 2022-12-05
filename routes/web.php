@@ -44,5 +44,9 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::resource('/', DashboardController::class);   
     Route::resource('/settings',SettingsController::class);
+    Route::group(['prefix' => '/settings/data'],function() {
+        Route::post('/update/photo','SettingsController@profilePicture')->name('settings.photo');
+        Route::post('/update/app','SettingsController@changeAppIcon')->name('settings.app');
+    });
 });
 

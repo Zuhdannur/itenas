@@ -71,8 +71,9 @@
                     <span class="user-status">{{ Auth::user()->role->name }}</span>
                 </div>
                 <span class="avatar">
-                    <img class="round" src="{{ asset('images/portrait/small/avatar-s-11.jpg') }}" alt="avatar"
-                        height="40" width="40">
+                    <img class="round"
+                        src="{{ Auth::user()->avatar == null ? asset('images/portrait/small/avatar-s-11.jpg') : asset('storage/' . Auth::user()->avatar) }}"
+                        alt="avatar" height="40" width="40">
                     <span class="avatar-status-online"></span>
                 </span>
             </a>
@@ -166,7 +167,8 @@
         <a class="d-flex align-items-center justify-content-between py-50 w-100" href="{{ url('app/user/view') }}">
             <div class="d-flex align-items-center">
                 <div class="avatar mr-75">
-                    <img src="{{ asset('images/portrait/small/avatar-s-8.jpg') }}" alt="png" height="32">
+                    <img src="{{ Auth()->user()->avatar == null ? asset('images/portrait/small/avatar-s-8.jpg') : asset('storage/' . Auth()->user()->avatar) }}"
+                        alt="png" height="32">
                 </div>
                 <div class="search-data">
                     <p class="search-data-title mb-0">{{ Auth::user()->name }}</p>

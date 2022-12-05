@@ -91,49 +91,43 @@ $(window).on('load', function () {
           bodyFontColor: window.colors.solid.black
         },
         scales: {
-          xAxes: [
-            {
-              barThickness: 15,
+          xAxes: [{
+            barThickness: 15,
+            display: true,
+            gridLines: {
               display: true,
-              gridLines: {
-                display: true,
-                color: grid_line_color,
-                zeroLineColor: grid_line_color
-              },
-              scaleLabel: {
-                display: false
-              },
-              ticks: {
-                fontColor: labelColor
-              }
+              color: grid_line_color,
+              zeroLineColor: grid_line_color
+            },
+            scaleLabel: {
+              display: false
+            },
+            ticks: {
+              fontColor: labelColor
             }
-          ],
-          yAxes: [
-            {
-              display: true,
-              gridLines: {
-                color: grid_line_color,
-                zeroLineColor: grid_line_color
-              },
-              ticks: {
-                stepSize: 100,
-                min: 0,
-                max: 400,
-                fontColor: labelColor
-              }
+          }],
+          yAxes: [{
+            display: true,
+            gridLines: {
+              color: grid_line_color,
+              zeroLineColor: grid_line_color
+            },
+            ticks: {
+              stepSize: 100,
+              min: 0,
+              max: 400,
+              fontColor: labelColor
             }
-          ]
+          }]
         }
       },
       data: {
         labels: ['7/12', '8/12', '9/12', '10/12', '11/12', '12/12', '13/12', '14/12', '15/12', '16/12', '17/12'],
-        datasets: [
-          {
-            data: [275, 90, 190, 205, 125, 85, 55, 87, 127, 150, 230, 280, 190],
-            backgroundColor: successColorShade,
-            borderColor: 'transparent'
-          }
-        ]
+        datasets: [{
+          data: [275, 90, 190, 205, 125, 85, 55, 87, 127, 150, 230, 280, 190],
+          backgroundColor: successColorShade,
+          borderColor: 'transparent'
+        }]
       }
     });
   }
@@ -292,49 +286,43 @@ $(window).on('load', function () {
           }
         },
         scales: {
-          xAxes: [
-            {
-              display: true,
-              gridLines: {
-                zeroLineColor: grid_line_color,
-                borderColor: 'transparent',
-                color: grid_line_color
-              },
-              scaleLabel: {
-                display: true
-              },
-              ticks: {
-                min: 0,
-                fontColor: labelColor
-              }
+          xAxes: [{
+            display: true,
+            gridLines: {
+              zeroLineColor: grid_line_color,
+              borderColor: 'transparent',
+              color: grid_line_color
+            },
+            scaleLabel: {
+              display: true
+            },
+            ticks: {
+              min: 0,
+              fontColor: labelColor
             }
-          ],
-          yAxes: [
-            {
-              display: true,
-              barThickness: 15,
-              gridLines: {
-                display: false
-              },
-              scaleLabel: {
-                display: true
-              },
-              ticks: {
-                fontColor: labelColor
-              }
+          }],
+          yAxes: [{
+            display: true,
+            barThickness: 15,
+            gridLines: {
+              display: false
+            },
+            scaleLabel: {
+              display: true
+            },
+            ticks: {
+              fontColor: labelColor
             }
-          ]
+          }]
         }
       },
       data: {
         labels: ['MON', 'TUE', 'WED ', 'THU', 'FRI', 'SAT', 'SUN'],
-        datasets: [
-          {
-            data: [710, 350, 470, 580, 230, 460, 120],
-            backgroundColor: window.colors.solid.info,
-            borderColor: 'transparent'
-          }
-        ]
+        datasets: [{
+          data: [710, 350, 470, 580, 230, 460, 120],
+          backgroundColor: window.colors.solid.info,
+          borderColor: 'transparent'
+        }]
       }
     });
   }
@@ -379,41 +367,37 @@ $(window).on('load', function () {
           }
         },
         scales: {
-          xAxes: [
-            {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true
+            },
+            gridLines: {
               display: true,
-              scaleLabel: {
-                display: true
-              },
-              gridLines: {
-                display: true,
-                color: grid_line_color,
-                zeroLineColor: grid_line_color
-              },
-              ticks: {
-                fontColor: labelColor
-              }
+              color: grid_line_color,
+              zeroLineColor: grid_line_color
+            },
+            ticks: {
+              fontColor: labelColor
             }
-          ],
-          yAxes: [
-            {
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true
+            },
+            ticks: {
+              stepSize: 100,
+              min: 0,
+              max: 400,
+              fontColor: labelColor
+            },
+            gridLines: {
               display: true,
-              scaleLabel: {
-                display: true
-              },
-              ticks: {
-                stepSize: 100,
-                min: 0,
-                max: 400,
-                fontColor: labelColor
-              },
-              gridLines: {
-                display: true,
-                color: grid_line_color,
-                zeroLineColor: grid_line_color
-              }
+              color: grid_line_color,
+              zeroLineColor: grid_line_color
             }
-          ]
+          }]
         },
         legend: {
           position: 'top',
@@ -427,8 +411,7 @@ $(window).on('load', function () {
       },
       data: {
         labels: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140],
-        datasets: [
-          {
+        datasets: [{
             data: [80, 150, 180, 270, 210, 160, 160, 202, 265, 210, 270, 255, 290, 360, 375],
             label: 'Europe',
             borderColor: lineChartDanger,
@@ -518,8 +501,7 @@ $(window).on('load', function () {
       ],
       data: {
         labels: ['STA', 'STR', 'AGI', 'VIT', 'CHA', 'INT'],
-        datasets: [
-          {
+        datasets: [{
             label: 'Donté Panlin',
             data: [25, 59, 90, 81, 60, 82],
             fill: true,
@@ -583,7 +565,9 @@ $(window).on('load', function () {
           gridLines: {
             color: grid_line_color
           },
-          angleLines: { color: grid_line_color }
+          angleLines: {
+            color: grid_line_color
+          }
         }
       }
     });
@@ -641,21 +625,19 @@ $(window).on('load', function () {
       },
       data: {
         labels: ['Africa', 'Asia', 'Europe', 'America', 'Antarctica', 'Australia'],
-        datasets: [
-          {
-            label: 'Population (millions)',
-            backgroundColor: [
-              primaryColorShade,
-              warningColorShade,
-              window.colors.solid.primary,
-              infoColorShade,
-              greyColor,
-              successColorShade
-            ],
-            data: [19, 17.5, 15, 13.5, 11, 9],
-            borderWidth: 0
-          }
-        ]
+        datasets: [{
+          label: 'Population (millions)',
+          backgroundColor: [
+            primaryColorShade,
+            warningColorShade,
+            window.colors.solid.primary,
+            infoColorShade,
+            greyColor,
+            successColorShade
+          ],
+          data: [19, 17.5, 15, 13.5, 11, 9],
+          borderWidth: 0
+        }]
       }
     });
   }
@@ -669,36 +651,32 @@ $(window).on('load', function () {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
-          xAxes: [
-            {
-              display: true,
-              gridLines: {
-                color: grid_line_color,
-                zeroLineColor: grid_line_color
-              },
-              ticks: {
-                stepSize: 10,
-                min: 0,
-                max: 140,
-                fontColor: labelColor
-              }
+          xAxes: [{
+            display: true,
+            gridLines: {
+              color: grid_line_color,
+              zeroLineColor: grid_line_color
+            },
+            ticks: {
+              stepSize: 10,
+              min: 0,
+              max: 140,
+              fontColor: labelColor
             }
-          ],
-          yAxes: [
-            {
-              display: true,
-              gridLines: {
-                color: grid_line_color,
-                zeroLineColor: grid_line_color
-              },
-              ticks: {
-                stepSize: 100,
-                min: 0,
-                max: 400,
-                fontColor: labelColor
-              }
+          }],
+          yAxes: [{
+            display: true,
+            gridLines: {
+              color: grid_line_color,
+              zeroLineColor: grid_line_color
+            },
+            ticks: {
+              stepSize: 100,
+              min: 0,
+              max: 400,
+              fontColor: labelColor
             }
-          ]
+          }]
         },
         legend: {
           display: false
@@ -718,292 +696,239 @@ $(window).on('load', function () {
         animation: {
           duration: 10000
         },
-        datasets: [
-          {
+        datasets: [{
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 20,
-                y: 74,
-                r: 10
-              }
-            ]
+            data: [{
+              x: 20,
+              y: 74,
+              r: 10
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 30,
-                y: 72,
-                r: 5
-              }
-            ]
+            data: [{
+              x: 30,
+              y: 72,
+              r: 5
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 10,
-                y: 110,
-                r: 5
-              }
-            ]
+            data: [{
+              x: 10,
+              y: 110,
+              r: 5
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 40,
-                y: 110,
-                r: 7
-              }
-            ]
+            data: [{
+              x: 40,
+              y: 110,
+              r: 7
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 20,
-                y: 135,
-                r: 6
-              }
-            ]
+            data: [{
+              x: 20,
+              y: 135,
+              r: 6
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 10,
-                y: 160,
-                r: 12
-              }
-            ]
+            data: [{
+              x: 10,
+              y: 160,
+              r: 12
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 30,
-                y: 165,
-                r: 7
-              }
-            ]
+            data: [{
+              x: 30,
+              y: 165,
+              r: 7
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 40,
-                y: 200,
-                r: 20
-              }
-            ]
+            data: [{
+              x: 40,
+              y: 200,
+              r: 20
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 90,
-                y: 185,
-                r: 7
-              }
-            ]
+            data: [{
+              x: 90,
+              y: 185,
+              r: 7
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 50,
-                y: 240,
-                r: 7
-              }
-            ]
+            data: [{
+              x: 50,
+              y: 240,
+              r: 7
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 60,
-                y: 275,
-                r: 10
-              }
-            ]
+            data: [{
+              x: 60,
+              y: 275,
+              r: 10
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 70,
-                y: 305,
-                r: 5
-              }
-            ]
+            data: [{
+              x: 70,
+              y: 305,
+              r: 5
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 80,
-                y: 325,
-                r: 4
-              }
-            ]
+            data: [{
+              x: 80,
+              y: 325,
+              r: 4
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 50,
-                y: 285,
-                r: 5
-              }
-            ]
+            data: [{
+              x: 50,
+              y: 285,
+              r: 5
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 60,
-                y: 235,
-                r: 5
-              }
-            ]
+            data: [{
+              x: 60,
+              y: 235,
+              r: 5
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 70,
-                y: 275,
-                r: 7
-              }
-            ]
+            data: [{
+              x: 70,
+              y: 275,
+              r: 7
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 80,
-                y: 290,
-                r: 4
-              }
-            ]
+            data: [{
+              x: 80,
+              y: 290,
+              r: 4
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 90,
-                y: 250,
-                r: 10
-              }
-            ]
+            data: [{
+              x: 90,
+              y: 250,
+              r: 10
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 100,
-                y: 220,
-                r: 7
-              }
-            ]
+            data: [{
+              x: 100,
+              y: 220,
+              r: 7
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 120,
-                y: 230,
-                r: 4
-              }
-            ]
+            data: [{
+              x: 120,
+              y: 230,
+              r: 4
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 110,
-                y: 320,
-                r: 15
-              }
-            ]
+            data: [{
+              x: 110,
+              y: 320,
+              r: 15
+            }]
           },
           {
             backgroundColor: warningColorShade,
             borderColor: warningColorShade,
-            data: [
-              {
-                x: 130,
-                y: 330,
-                r: 7
-              }
-            ]
+            data: [{
+              x: 130,
+              y: 330,
+              r: 7
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 100,
-                y: 310,
-                r: 5
-              }
-            ]
+            data: [{
+              x: 100,
+              y: 310,
+              r: 5
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 110,
-                y: 240,
-                r: 5
-              }
-            ]
+            data: [{
+              x: 110,
+              y: 240,
+              r: 5
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 120,
-                y: 270,
-                r: 7
-              }
-            ]
+            data: [{
+              x: 120,
+              y: 270,
+              r: 7
+            }]
           },
           {
             backgroundColor: primaryColorShade,
             borderColor: primaryColorShade,
-            data: [
-              {
-                x: 130,
-                y: 300,
-                r: 6
-              }
-            ]
+            data: [{
+              x: 130,
+              y: 300,
+              r: 6
+            }]
           }
         ]
       }
@@ -1020,7 +945,9 @@ $(window).on('load', function () {
         maintainAspectRatio: false,
         responsiveAnimationDuration: 500,
         cutoutPercentage: 60,
-        legend: { display: false },
+        legend: {
+          display: false
+        },
         tooltips: {
           callbacks: {
             label: function (tooltipItem, data) {
@@ -1041,15 +968,13 @@ $(window).on('load', function () {
         }
       },
       data: {
-        datasets: [
-          {
-            labels: ['Tablet', 'Mobile', 'Desktop'],
-            data: [10, 10, 80],
-            backgroundColor: [successColorShade, warningLightColor, window.colors.solid.primary],
-            borderWidth: 0,
-            pointStyle: 'rectRounded'
-          }
-        ]
+        datasets: [{
+          labels: ['Tablet', 'Mobile', 'Desktop'],
+          data: [10, 10, 80],
+          backgroundColor: [successColorShade, warningLightColor, window.colors.solid.primary],
+          borderWidth: 0,
+          pointStyle: 'rectRounded'
+        }]
       }
     });
   }
@@ -1088,34 +1013,30 @@ $(window).on('load', function () {
           bodyFontColor: window.colors.solid.black
         },
         scales: {
-          xAxes: [
-            {
-              gridLines: {
-                color: grid_line_color,
-                zeroLineColor: grid_line_color
-              },
-              ticks: {
-                stepSize: 10,
-                min: 0,
-                max: 140,
-                fontColor: labelColor
-              }
+          xAxes: [{
+            gridLines: {
+              color: grid_line_color,
+              zeroLineColor: grid_line_color
+            },
+            ticks: {
+              stepSize: 10,
+              min: 0,
+              max: 140,
+              fontColor: labelColor
             }
-          ],
-          yAxes: [
-            {
-              gridLines: {
-                color: grid_line_color,
-                zeroLineColor: grid_line_color
-              },
-              ticks: {
-                stepSize: 100,
-                min: 0,
-                max: 400,
-                fontColor: labelColor
-              }
+          }],
+          yAxes: [{
+            gridLines: {
+              color: grid_line_color,
+              zeroLineColor: grid_line_color
+            },
+            ticks: {
+              stepSize: 100,
+              min: 0,
+              max: 400,
+              fontColor: labelColor
             }
-          ]
+          }]
         },
         legend: {
           position: 'top',
@@ -1133,11 +1054,9 @@ $(window).on('load', function () {
         }
       },
       data: {
-        datasets: [
-          {
+        datasets: [{
             label: 'iPhone',
-            data: [
-              {
+            data: [{
                 x: 72,
                 y: 225
               },
@@ -1210,8 +1129,7 @@ $(window).on('load', function () {
           },
           {
             label: 'Samsung Note',
-            data: [
-              {
+            data: [{
                 x: 13,
                 y: 95
               },
@@ -1278,8 +1196,7 @@ $(window).on('load', function () {
           },
           {
             label: 'OnePlus',
-            data: [
-              {
+            data: [{
                 x: 70,
                 y: 195
               },
@@ -1392,39 +1309,35 @@ $(window).on('load', function () {
           bodyFontColor: window.colors.solid.black
         },
         scales: {
-          xAxes: [
-            {
-              display: true,
-              gridLines: {
-                color: 'transparent',
-                zeroLineColor: grid_line_color
-              },
-              scaleLabel: {
-                display: true
-              },
-              ticks: {
-                fontColor: labelColor
-              }
+          xAxes: [{
+            display: true,
+            gridLines: {
+              color: 'transparent',
+              zeroLineColor: grid_line_color
+            },
+            scaleLabel: {
+              display: true
+            },
+            ticks: {
+              fontColor: labelColor
             }
-          ],
-          yAxes: [
-            {
-              display: true,
-              gridLines: {
-                color: 'transparent',
-                zeroLineColor: grid_line_color
-              },
-              ticks: {
-                stepSize: 100,
-                min: 0,
-                max: 400,
-                fontColor: labelColor
-              },
-              scaleLabel: {
-                display: true
-              }
+          }],
+          yAxes: [{
+            display: true,
+            gridLines: {
+              color: 'transparent',
+              zeroLineColor: grid_line_color
+            },
+            ticks: {
+              stepSize: 100,
+              min: 0,
+              max: 400,
+              fontColor: labelColor
+            },
+            scaleLabel: {
+              display: true
             }
-          ]
+          }]
         }
       },
       data: {
@@ -1445,8 +1358,7 @@ $(window).on('load', function () {
           '20/12',
           ''
         ],
-        datasets: [
-          {
+        datasets: [{
             label: 'Africa',
             data: [40, 55, 45, 75, 65, 55, 70, 60, 100, 98, 90, 120, 125, 140, 155],
             lineTension: 0,
